@@ -1,0 +1,228 @@
+﻿<local:BudzetBuddy x:Class="ExpansesWPF.Pages.SubPages.RaportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpansesWPF.BudzetBuddy" 
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        x:Name="raportWIndow"
+        WindowStyle="None"
+        Title="" Height="578" Width="990"
+        Loaded="raportWIndow_Loaded"
+        >
+    <Border CornerRadius="12" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50px"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120px"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="30px"></ColumnDefinition>
+                <ColumnDefinition Width="30px"></ColumnDefinition>
+                <ColumnDefinition Width="30px"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid MouseDown="mainWindow_MouseDown" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Background="#189bcc">
+                <Label Grid.Column="3" VerticalAlignment="Center" HorizontalContentAlignment="Center" Content="Raport" Foreground="White" FontSize="17" ></Label>
+            </Grid>
+            <Button  Grid.Column="2" Grid.Row="0" x:Name="btnMinimize"  BorderThickness="0" Content=""  Foreground="White" FontSize="16" FontFamily="Sylfaen" Cursor="Hand" Click="btnMinimize_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#ffcc5c"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ffeead"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="30" Height="30" CornerRadius="15" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Grid.Column="4" x:Name="btnClose"  BorderThickness="0" Content=""  Foreground="White" FontSize="12" FontFamily="Sylfaen" Cursor="Hand" Click="btnClose_Click">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#ed2939"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff4040"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="30" Height="30" CornerRadius="15" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Grid.Column="3" x:Name="btnMaximalize"  BorderThickness="0" Content=""  Foreground="White" FontSize="12" FontFamily="Sylfaen" Cursor="Hand" Click="btnMaximalize_Click">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#52fa08"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#38a907"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="30" Height="30" CornerRadius="15" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <TabControl Grid.Row="1" Grid.Column="1" Grid.RowSpan="5" Padding="5">
+                <TabItem Header="Tabela" Background="Transparent" Foreground="#189bcc" FontSize="20" BorderBrush="Transparent" >
+                   
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" Grid.RowSpan="5">
+                        <Label Content="Wybierz miesiąc:" Foreground="#189bcc" FontSize="25" Width="400"></Label>
+                        <ComboBox Background="White" SelectionChanged="cbMonths_SelectionChanged" FontSize="25" Foreground="#189bcc" x:Name="cbMonths" Width="400"></ComboBox>
+                   
+                
+                        <DataGrid Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" FontSize="28" Margin="20" Foreground="White" Background="Transparent" FontFamily="Sylfaen" x:Name="gvSummedPrice" AutoGenerateColumns="False" HorizontalGridLinesBrush="#3f00ff" VerticalGridLinesBrush="#3f00ff" RowBackground="Transparent" MinColumnWidth="30" EnableRowVirtualization="False" IsReadOnly="True" Width="506">
+                            <DataGrid.RowStyle>
+                                <Style/>
+                            </DataGrid.RowStyle>
+
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="Background" Value="#4fa0e4" />
+                                    <Setter Property="FontSize" Value="32"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Width="*" Header="Kategoria" Foreground="#189bcc" Binding="{Binding CategoryName}"/>
+                                <DataGridTextColumn Width="*" Header="Suma" Foreground="#189bcc" Binding="{Binding SummedPrice}"/>
+                            </DataGrid.Columns>
+
+
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Graficznie" Background="Transparent" Foreground="#189bcc" FontSize="20" BorderBrush="Transparent"></TabItem>
+            </TabControl>
+          
+          
+            <Grid Grid.Column="1" Grid.Row="2" Grid.RowSpan="2">
+
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                    <RowDefinition Height="50px"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="/Pages/coin_money_icon-icons.com_51091.ico"></Image>
+                <StackPanel Grid.Row="1" >
+                    <Button  x:Name="btnExpanses"  BorderThickness="0" Content="Wydatki"  Foreground="White"  FontSize="25" FontFamily="Sylfaen" Cursor="Hand" Click="btnMenu_Click" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="50">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#bcced7"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#aaaaaa"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="Auto" Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="2" >
+                    <Button  x:Name="btnCategories"  BorderThickness="0" Content="Kategorie"  Foreground="White"  FontSize="25" FontFamily="Sylfaen" Cursor="Hand" Click="btnMenu_Click" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="50">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#189bcc"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#3d85c6"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="Auto" Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="3" >
+                    <Button  x:Name="btnRaport"  BorderThickness="0" Content="Raport"  Foreground="White"  FontSize="25" FontFamily="Sylfaen" Cursor="Hand" Click="btnMenu_Click" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="50">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#bcced7"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#aaaaaa"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="Auto" Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="2" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+            </Grid>
+
+        </Grid>
+    </Border>
+</local:BudzetBuddy>

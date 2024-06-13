@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ExpansesDB">
+  <DataContextMoniker Name="/ExpansesDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b5c0b76f-b924-4461-9d9a-ac96b9a0ee60" isExpanded="false" absoluteBounds="1.625, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/ExpansesDBDataContext/Users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f065f0ac-6597-4c62-ab10-364b7c536e5b" absoluteBounds="1.6400000000000001, 2.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5295aafd-935d-47f0-a19c-83bb9acc7bee" isExpanded="false" absoluteBounds="1.625, 2, 2, 0.45">
+      <DataClassMoniker Name="/ExpansesDBDataContext/Categories" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92f4a479-405f-4c4e-870e-afefcfa8102a" absoluteBounds="1.6400000000000001, 2.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d8cec585-1dde-482d-8b4f-2e511e034fc6" isExpanded="false" absoluteBounds="3.625, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/ExpansesDBDataContext/Months" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96c10ea5-a0ac-4219-aced-641ac83da93e" absoluteBounds="3.64, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="381a9df7-27bd-4966-bc2a-8cb6c1ae0e99" absoluteBounds="5.625, 2, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ExpansesDBDataContext/MonthlyExpanses" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b414afb-c2f6-4d5e-9195-3282cd984d1f" absoluteBounds="5.64, 2.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99744559-892e-43b9-8d4c-17c81f33480a" isExpanded="false" absoluteBounds="3.625, 2, 2, 0.45">
+      <DataClassMoniker Name="/ExpansesDBDataContext/Expanses" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d596cf08-db00-419e-bcff-4383f5e5bfe0" absoluteBounds="3.64, 2.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
