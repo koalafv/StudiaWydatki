@@ -1,27 +1,23 @@
 <h1>Wydatki</h1>
 
 <h2>Opis projektu:</h2>
-<br>
-  <p>• Program Wydatki pomaga w nadzorowaniu swoich wydatków. Umożliwia dodawanie wydatków do określonych kategorii, zarówno jako wydatki jednorazowe, jak i cykliczne, które program będzie automatycznie dodawać co miesiąc. Użytkownik może   generować miesięczne raporty podsumowujące wszystkie wydatki według kategorii oraz ogólne sumy wydatków. Projekt został zrealizowany w technologii C# WPF oraz wykorzystuje bazę danych TSQL.</p>
+  <h5>Program Wydatki pomaga w nadzorowaniu swoich wydatków. Umożliwia dodawanie wydatków do określonych kategorii, zarówno jako wydatki jednorazowe, jak i cykliczne, które program będzie automatycznie dodawać co miesiąc. Użytkownik może   generować miesięczne raporty podsumowujące wszystkie wydatki według kategorii oraz ogólne sumy wydatków. Projekt został zrealizowany w technologii C# WPF oraz wykorzystuje bazę danych TSQL.</h5>
 
-Wymagania systemowe:
-  •	System operacyjny: Windows 7 lub nowszy
-  •	.NET Framework: 4.7.2 lub nowszy
-  •	SQL Server: 2016 lub nowszy
-  
-Instrukcja instalacji:
-  1.	Pobierz projekt
-    •	Sklonuj repozytorium: https://github.com/koalafv/StudiaWydatki.git
-  2.	Skonfiguruj bazę danych
-    •	Z pobranego projektu, wgraj lokalnie bazę podesłana 
-    •	Zmień w „app.config” connection string, który odnosi się do twojego hosta.
-  3.	Uruchom aplikację
-    •	Skompiluj i uruchom projekt za pomocą Visual Studio.
+<h2>Wymagania systemowe:</h2>
+  <h5>• System operacyjny: Windows 7 lub nowszy<br>
+  • .NET Framework: 4.7.2 lub nowszy<br>
+  • SQL Server: 2016 lub nowszy</h5>
 
-Instrukcja użytkowania:
-  1.	Zaloguj się
-    •	Dodaj do bazy danych w tabeli „Users” login oraz hasło i datę dodania.
+<h2>Instrukcja instalacji:</h2>
+  <h5>•	Sklonuj repozytorium: https://github.com/koalafv/StudiaWydatki.git<br>
+    •	Z pobranego projektu, wgraj lokalnie bazę podesłana <br>
+    •	Zmień w „app.config” connection string, który odnosi się do twojego hosta.<br>
+    •	Skompiluj i uruchom projekt za pomocą Visual Studio.</h5>
+
+<h2>Instrukcja Obsługi:</h2>
+    <h5>•	Dodaj do bazy danych w tabeli „Users” login oraz hasło i datę dodania.
     • Example: insert into Users (usr_Login,usr_Password,usr_date) values ('Studia','studia123!',GETDATE())
+    • Zaloguj się</h5>
   2.	Dodawanie wydatków
     •	Wybierz kategorię wydatku.
     •	Wprowadź kwotę i opis wydatku.
@@ -33,17 +29,16 @@ Instrukcja użytkowania:
     •	Przejdź do sekcji "Lista wydatków".
     •	Wybierz odpowiedni filtr, aby zobaczyć szczegóły wydatków.
 
-Licencja:
-  • Projekt na studia
+<h2>Licencja:</h2>
+  <h5>• Projekt na studia</h5>
   
-Autorzy i współtwórcy:
-  •	Patryk Kot
-  •	Łukasz Kramorz
+<h2>Autorzy i współtwórcy:</h2>
+  <h5>•	Patryk Kot<br>
+  •	Łukasz Kramorz</h5>
 
-Kontakt:
-  1. Jeśli masz pytania lub sugestie, skontaktuj się z nami:
-    •	chx103888@student.chorzow.merito.pl
-    •	chx102138@student.chorzow.merito.pl
+<h2>Kontakt</h2>
+   </h>•	chx103888@student.chorzow.merito.pl<br>
+    •	chx102138@student.chorzow.merito.pl</h5>
 
 
 
