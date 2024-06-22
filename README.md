@@ -16,9 +16,11 @@
 
 <h2>Instrukcja Obsługi:</h2>
     <pre>1.	Baza Danych</pre>
-    <h5>•	Dodaj do bazy danych w tabeli „Users” login oraz hasło i datę dodania.<br>
-    • Example: insert into Users (usr_Login,usr_Password,usr_date) values ('Studia','studia123!',GETDATE())<br>
-    • Zaloguj się<br><br>
+    <h5>•	Dodaj do bazy danych w tabeli „Users” login oraz hasło i datę dodania.</h5>
+    ```
+      insert into Users (usr_Login,usr_Password,usr_date) values ('Studia','studia123!',GETDATE())
+    ```
+   <h5>• Zaloguj się<br><br>
   <pre>2.	Dodawanie wydatków</pre>
     •	Wybierz kategorię wydatku.<br>
     •	Wprowadź kwotę i opis wydatku.<br>
