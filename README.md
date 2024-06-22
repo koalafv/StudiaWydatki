@@ -9,7 +9,7 @@
 
 <h2>Instrukcja instalacji:</h2>
   <h5>•	Sklonuj repozytorium: https://github.com/koalafv/StudiaWydatki.git<br>
-    •	Z pobranego projektu, wgraj lokalnie bazę podesłana <br>
+    •	Z pobranego projektu, wgraj lokalnie bazę, która będzie w głownym folderze <br>
     •	Zmień w „app.config” connection string, który odnosi się do twojego hosta.<br>
     •	Skompiluj i uruchom projekt za pomocą Visual Studio.</h5>
 
