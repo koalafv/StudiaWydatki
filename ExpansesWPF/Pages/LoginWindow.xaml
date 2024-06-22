@@ -9,7 +9,7 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         MouseDown="BudzetBuddy_MouseDown"
-        Title="LoginWindow" Height="578" Width="990">
+        Title="Strona logowania" Height="578" Width="990">
     <Border CornerRadius="12" >
         <Grid>
             <Grid.RowDefinitions>

@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         x:Name="mainWindow"
         WindowStyle="None"
-        Title="" Height="578" Width="990"
+        Title="Strona głowna" Height="578" Width="990"
         Loaded="mainWindow_Loaded"
         SizeChanged="mainWindow_SizeChanged">
     <Border CornerRadius="12" >

@@ -30,6 +30,7 @@ namespace ExpansesWPF.Pages.SubPages
 			setupHeight();
 			LoadCategories();
 		}
+
 		private void LoadCategories() => gvCategories.ItemsSource = db.Categories.Where(w => w.categories_usr_ID == userID).ToList();
 
 		public void setupHeight()
