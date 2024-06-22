@@ -1,6 +1,6 @@
 <h1>Wydatki</h1>
 
-<h1>Opis projektu:</h1>
+<h2>Opis projektu:</h2>
 <br>
   <p>• Program Wydatki pomaga w nadzorowaniu swoich wydatków. Umożliwia dodawanie wydatków do określonych kategorii, zarówno jako wydatki jednorazowe, jak i cykliczne, które program będzie automatycznie dodawać co miesiąc. Użytkownik może   generować miesięczne raporty podsumowujące wszystkie wydatki według kategorii oraz ogólne sumy wydatków. Projekt został zrealizowany w technologii C# WPF oraz wykorzystuje bazę danych TSQL.</p>
 
