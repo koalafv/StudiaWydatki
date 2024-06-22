@@ -73,6 +73,13 @@ namespace ExpansesWPF.BudzetBuddy
 					cApp.MainWindow.Show();
 					this.Close();
 				}
+				else if(btn.Name == "btnLogout")
+				{
+					var cApp = ((App)System.Windows.Application.Current);
+					cApp.MainWindow = new LoginWindow();
+					cApp.MainWindow.Show();
+					this.Close();
+				}
 			}
 			catch (Exception ex)
 			{

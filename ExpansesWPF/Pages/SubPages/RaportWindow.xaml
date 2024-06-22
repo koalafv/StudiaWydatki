@@ -121,7 +121,7 @@
                         </DataGrid>
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="Graficznie" Background="Transparent" Foreground="#189bcc" FontSize="20" BorderBrush="Transparent"></TabItem>
+                <TabItem Header="Graficznie" Visibility="Hidden" Background="Transparent" Foreground="#189bcc" FontSize="20" BorderBrush="Transparent"></TabItem>
             </TabControl>
           
           
@@ -198,6 +198,27 @@
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#aaaaaa"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="Auto" Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Row="4">
+                    <Button  x:Name="btnLogout"  BorderThickness="0" Content="Wyloguj"  Foreground="White"  FontSize="25" FontFamily="Sylfaen" Cursor="Hand" Click="btnMenu_Click" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="50">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#189bcc"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#3d85c6"></Setter>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
