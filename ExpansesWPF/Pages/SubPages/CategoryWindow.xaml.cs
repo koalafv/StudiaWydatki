@@ -29,6 +29,8 @@ namespace ExpansesWPF.Pages.SubPages
 		{
 			setupHeight();
 			LoadCategories();
+			if (AdminPanelVisibility())
+				stpPanelAdmin.Visibility = Visibility.Visible; 
 		}
 
 		private void LoadCategories() => gvCategories.ItemsSource = db.Categories.Where(w => w.categories_usr_ID == userID).ToList();

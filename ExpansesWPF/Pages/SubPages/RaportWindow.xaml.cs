@@ -19,7 +19,9 @@ namespace ExpansesWPF.Pages.SubPages
         {
             LoadMonths();
             setupHeight();
-        }
+			if (AdminPanelVisibility())
+				stpPanelAdmin.Visibility = Visibility.Visible;
+		}
         public void setupHeight ( )
         {
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;

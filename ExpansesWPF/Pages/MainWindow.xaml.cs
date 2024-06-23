@@ -29,7 +29,9 @@ namespace ExpansesWPF.Pages
             LoadExpanses();
             LoadCategories();
             AddMonthlyExpanses();
-        }
+			if (AdminPanelVisibility())
+				stpPanelAdmin.Visibility = Visibility.Visible;
+		}
 
         private void AddMonthlyExpanses ( )
         {

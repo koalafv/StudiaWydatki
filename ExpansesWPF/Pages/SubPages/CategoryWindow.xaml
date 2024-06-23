@@ -200,6 +200,27 @@
                         </Button.Template>
                     </Button>
                 </StackPanel>
+                <StackPanel x:Name="stpPanelAdmin" Visibility="Hidden" Grid.Row="5" Grid.RowSpan="2">
+                    <Button  x:Name="btnAdminPanel"  BorderThickness="0" Content="Panel&#xA;Admina"  Foreground="White"  FontSize="25" FontFamily="Sylfaen" Cursor="Hand" Click="btnMenu_Click" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="100">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#bcced7"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#aaaaaa"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="Auto" Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="2" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>

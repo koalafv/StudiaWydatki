@@ -1,5 +1,7 @@
 ﻿using ExpansesWPF.Pages;
 using ExpansesWPF.Pages.SubPages;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows;
 using System.Windows.Input;
 using MessageBox = System.Windows.MessageBox;
@@ -7,17 +9,43 @@ using MessageBox = System.Windows.MessageBox;
 
 namespace ExpansesWPF.BudzetBuddy
 {
-	public class BudzetBuddy : Window
+	public class BudzetBuddy : ExpansesWPF.Window
 	{
 		public ExpansesWPF.BudzetBuddy.ExpansesDBDataContext db = new ExpansesWPF.BudzetBuddy.ExpansesDBDataContext();
 		public static int userID { get; set; }
-		public void ErrorBox(string message) => MessageBox.Show(message, "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+		public static UserAdmin UserAdmin { get; set; }
+		public bool AddAccount(string login, string password)
+		{
+			var newUser = new Users
+			{
+				usr_date = DateTime.Now,
+				usr_IsAdmin = false,
+				usr_Login = login,
+				usr_Password = HashPassword(password)
+			};
 
-		public void WarningBox(string message) => MessageBox.Show(message, "Uwaga", MessageBoxButton.OK, MessageBoxImage.Warning);
+			db.Users.InsertOnSubmit(newUser);
+			db.SubmitChanges();
 
 
-		public void SuccesBox(string message) => MessageBox.Show(message, "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
+			return true;
+		}
+		private static string HashPassword(string password)
+		{
+			using (SHA256 sha256Hash = SHA256.Create())
+			{
+				// Convert the input string to a byte array and compute the hash.
+				byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
 
+				// Convert the byte array to a string representation.
+				StringBuilder builder = new StringBuilder();
+				for (int i = 0; i < bytes.Length; i++)
+				{
+					builder.Append(bytes[i].ToString("x2"));
+				}
+				return builder.ToString();
+			}
+		}
 		public bool IsCredentialsRight(string login, string pass)
 		{
 			var users = db.Users.ToList();
@@ -34,16 +62,31 @@ namespace ExpansesWPF.BudzetBuddy
 				return false;
 			}
 
-			var user = users.Where(w => string.Equals(w.usr_Login, login, StringComparison.Ordinal) && string.Equals(w.usr_Password, pass, StringComparison.Ordinal)).FirstOrDefault();
+			var user = users.Where(w => string.Equals(w.usr_Login, login, StringComparison.Ordinal) && string.Equals(w.usr_Password, HashPassword(pass), StringComparison.Ordinal)).FirstOrDefault();
 
 			if (user != null)
 			{
 				userID = user.usr_ID;
 
+				if (user.usr_IsAdmin != null && (bool)user.usr_IsAdmin)
+				{
+					UserAdmin = new UserAdmin();
+					UserAdmin.usr_IsAdmin = true;
+					UserAdmin.usr_Login = user.usr_Login;
+					UserAdmin.usr_Password = user.usr_Password;
+				}
+
 				return true;
 			}
 
 			WarningBox("Nieprawidłowe dane logowania");
+
+			return false;
+		}
+
+		public bool AdminPanelVisibility()
+		{
+			if (UserAdmin != null) return true;
 
 			return false;
 		}
@@ -77,6 +120,13 @@ namespace ExpansesWPF.BudzetBuddy
 				{
 					var cApp = ((App)System.Windows.Application.Current);
 					cApp.MainWindow = new LoginWindow();
+					cApp.MainWindow.Show();
+					this.Close();
+				}
+				else if(btn.Name == "btnAdminPanel")
+				{
+					var cApp = ((App)System.Windows.Application.Current);
+					cApp.MainWindow = new AdminPanelWindow();
 					cApp.MainWindow.Show();
 					this.Close();
 				}
