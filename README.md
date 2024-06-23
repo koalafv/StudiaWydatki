@@ -14,7 +14,7 @@
     •	Skompiluj i uruchom projekt za pomocą Visual Studio.</h5>
 
 <h2>Instrukcja Obsługi:</h2>
-    <pre>1.	Baza Danych</pre>
+    <pre>1.	Tworzenie własnego konta</pre>
     <h5>•	Zalogowanie się na konto administratora.<br>
       Login - "a"<br>
       Hasło - "a"<br>
