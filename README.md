@@ -15,9 +15,10 @@
 
 <h2>Instrukcja Obsługi:</h2>
     <pre>1.	Baza Danych</pre>
-    <h5>•	Dodaj do bazy danych w tabeli „Users” login oraz hasło i datę dodania.<br>
-      • insert into Users (usr_Login,usr_Password,usr_date) values ('Studia','studia123!',GETDATE())</br>
-   • Zaloguj się<br><br>
+    <h5>•	Zalogowanie się na konto administratora.<br>
+      Login - "a"<br>
+      Hasło - "a"<br>
+   • Wejdz do "Panel Admina" i stwórz swoje konto, po czym zaloguj się i korzystaj z aplikacji
   <pre>2.	Dodawanie wydatków</pre>
     •	Wybierz kategorię wydatku.<br>
     •	Wprowadź kwotę i opis wydatku.<br>
