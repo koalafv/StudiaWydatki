@@ -32,7 +32,7 @@
 <h2>Diagram (Użytkownik):</h2>
 <img src="https://cdn.discordapp.com/attachments/1234064529093038172/1234064726741225524/Im9DNcnUBEYAAAAASUVORK5CYII.png?ex=6677e256&is=667690d6&hm=7dbfa27d4ff74f2fb4eff2edcc8221f25ab208ad2b03c0f7caa10902c995f105">
 <h2>Diagram klas</h2>
-<img src="https://cdn.discordapp.com/attachments/1234064529093038172/1254045091354382397/image.png?ex=66781000&is=6676be80&hm=721bd5b2a90df23e4bb0c3a42a825c46a303162c2f3eb5ec53276d59731049ed&">
+<img src="https://cdn.discordapp.com/attachments/1234064529093038172/1254381031264620574/image.png?ex=667948df&is=6677f75f&hm=592f67296d0f02578fb012469ad5860b054a629607f940b019e64f2202150340&">
 <h2>Licencja:</h2>
   <h5>• Projekt na studia</h5>
   
