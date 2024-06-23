@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExpansesWPF.BudzetBuddy.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,23 +18,23 @@ namespace ExpansesWPF.Pages.SubPages
 	/// <summary>
 	/// Interaction logic for AdminPanelWindow.xaml
 	/// </summary>
-	public partial class AdminPanelWindow : BudzetBuddy.BudzetBuddy
+	public partial class AdminPanelWindow : BudzetBuddy.BudzetBuddy, ISetHeight
 	{
 		public AdminPanelWindow()
 		{
 			InitializeComponent();
 		}
-
-		private void AdminPanelWindow_Loaded(object sender, RoutedEventArgs e)
-		{
-			setupHeight();
-			if (AdminPanelVisibility())
-				stpPanelAdmin.Visibility = Visibility.Visible;
-		}
-		public void setupHeight()
+		public void setHeight()
 		{
 			this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
 			WindowState = WindowState.Maximized;
+		}
+
+		private void AdminPanelWindow_Loaded(object sender, RoutedEventArgs e)
+		{
+
+			if (AdminPanelVisibility())
+				stpPanelAdmin.Visibility = Visibility.Visible;
 		}
 
 		private void AdminPanelWindow_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -41,14 +42,11 @@ namespace ExpansesWPF.Pages.SubPages
 
 		}
 
-		
+
 		private void btnCredentials_Click(object sender, RoutedEventArgs e)
 		{
 			if (AddAccount(tbLogin.Text, tbPassword.Password))
 				SuccesBox("Pomyślnie dodano użytkownika");
-			else
-				WarningBox("błąd podczas dodawania użytkownika");
-			
 		}
 	}
 }

@@ -8,6 +8,7 @@ using ExpansesWPF.BudzetBuddy;
 using System.Windows.Documents;
 using System.ComponentModel;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using ExpansesWPF.BudzetBuddy.Interfaces;
 
 
 namespace ExpansesWPF.Pages
@@ -15,17 +16,22 @@ namespace ExpansesWPF.Pages
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : BudzetBuddy.BudzetBuddy
-    {
+    public partial class MainWindow : BudzetBuddy.BudzetBuddy, ISetHeight
+	{
 
         public MainWindow ( )
         {
             InitializeComponent();
         }
+		public void setHeight()
+		{
+			this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+			WindowState = WindowState.Maximized;
+		}
 
-        private void mainWindow_Loaded ( object sender, RoutedEventArgs e )
+		private void mainWindow_Loaded ( object sender, RoutedEventArgs e )
         {
-            setupHeight();
+            setHeight();
             LoadExpanses();
             LoadCategories();
             AddMonthlyExpanses();
@@ -82,12 +88,6 @@ namespace ExpansesWPF.Pages
             var categories = db.Categories.Where(w => w.categories_usr_ID == userID).Select(s => s.categories_name).ToList();
             cbCategory.ItemsSource = categories;
             cbCatergoryMonthly.ItemsSource = categories;
-        }
-
-        public void setupHeight ( )
-        {
-            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            WindowState = WindowState.Maximized;
         }
 
         private void mainWindow_SizeChanged ( object sender, SizeChangedEventArgs e )
@@ -216,7 +216,7 @@ namespace ExpansesWPF.Pages
                 AddMonthlyExpanses();
             }
         }
-    }
+	}
 
     public class ExpansesDT : Expanses
     {

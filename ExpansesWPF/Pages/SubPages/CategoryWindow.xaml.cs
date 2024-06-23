@@ -1,4 +1,5 @@
 ﻿using ExpansesWPF.BudzetBuddy;
+using ExpansesWPF.BudzetBuddy.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,28 +19,26 @@ namespace ExpansesWPF.Pages.SubPages
 	/// <summary>
 	/// Logika interakcji dla klasy CategoryWindow.xaml
 	/// </summary>
-	public partial class CategoryWindow : BudzetBuddy.BudzetBuddy
+	public partial class CategoryWindow : BudzetBuddy.BudzetBuddy,ISetHeight
 	{
 		public CategoryWindow()
 		{
 			InitializeComponent();
 		}
+		public void setHeight()
+		{
+			this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+			WindowState = WindowState.Maximized;
+		}
 
 		private void categoryWindow_Loaded(object sender, RoutedEventArgs e)
 		{
-			setupHeight();
 			LoadCategories();
 			if (AdminPanelVisibility())
 				stpPanelAdmin.Visibility = Visibility.Visible; 
 		}
 
 		private void LoadCategories() => gvCategories.ItemsSource = db.Categories.Where(w => w.categories_usr_ID == userID).ToList();
-
-		public void setupHeight()
-		{
-			this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-			WindowState = WindowState.Maximized;
-		}
 
 		private void btnMaximalize_Click(object sender, RoutedEventArgs e)
 		{

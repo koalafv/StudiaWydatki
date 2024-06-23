@@ -1,32 +1,32 @@
 ﻿using ExpansesWPF.BudzetBuddy;
+using ExpansesWPF.BudzetBuddy.Interfaces;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace ExpansesWPF.Pages.SubPages
 {
-    /// <summary>
-    /// Logika interakcji dla klasy RaportWindow.xaml
-    /// </summary>
-    public partial class RaportWindow : BudzetBuddy.BudzetBuddy
+	/// <summary>
+	/// Logika interakcji dla klasy RaportWindow.xaml
+	/// </summary>
+	public partial class RaportWindow : BudzetBuddy.BudzetBuddy, ISetHeight
     {
         List<Months> months = new List<Months>();
         public RaportWindow ( )
         {
             InitializeComponent();
         }
+		public void setHeight()
+		{
+			this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+			WindowState = WindowState.Maximized;
+		}
 
-        private void raportWIndow_Loaded ( object sender, RoutedEventArgs e )
+		private void raportWIndow_Loaded ( object sender, RoutedEventArgs e )
         {
             LoadMonths();
-            setupHeight();
 			if (AdminPanelVisibility())
 				stpPanelAdmin.Visibility = Visibility.Visible;
 		}
-        public void setupHeight ( )
-        {
-            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            WindowState = WindowState.Maximized;
-        }
 
         private void LoadMonths ( )
         {
@@ -69,7 +69,7 @@ namespace ExpansesWPF.Pages.SubPages
                 gvSummedPrice.ItemsSource = sumPrice;
             }
         }
-    }
+	}
 
     class SumPrice
     {
