@@ -14,6 +14,7 @@ namespace ExpansesWPF.BudzetBuddy
 		public ExpansesWPF.BudzetBuddy.ExpansesDBDataContext db = new ExpansesWPF.BudzetBuddy.ExpansesDBDataContext();
 		public static int userID { get; set; }
 		public static UserAdmin UserAdmin { get; set; }
+
 		public bool AddAccount(string login, string password)
 		{
 			try
@@ -44,18 +45,6 @@ namespace ExpansesWPF.BudzetBuddy
 				return false;
 			}
 
-		}
-		private static string HashPassword(string password)
-		{
-			using (SHA256 sha256Hash = SHA256.Create())
-			{
-				byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-				StringBuilder builder = new StringBuilder();
-				for (int i = 0; i < bytes.Length; i++)
-					builder.Append(bytes[i].ToString("x2"));
-				return builder.ToString();
-			}
 		}
 		public bool IsCredentialsRight(string login, string pass)
 		{
@@ -178,6 +167,17 @@ namespace ExpansesWPF.BudzetBuddy
 			System.Windows.Controls.Button btn = sender as System.Windows.Controls.Button;
 			MenuButtonClick(btn);
 		}
-	}
+		private static string HashPassword(string password)
+		{
+			using (SHA256 sha256Hash = SHA256.Create())
+			{
+				byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
 
+				StringBuilder builder = new StringBuilder();
+				for (int i = 0; i < bytes.Length; i++)
+					builder.Append(bytes[i].ToString("x2"));
+				return builder.ToString();
+			}
+		}
+	}
 }

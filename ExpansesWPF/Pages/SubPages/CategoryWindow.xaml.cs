@@ -19,12 +19,13 @@ namespace ExpansesWPF.Pages.SubPages
 	/// <summary>
 	/// Logika interakcji dla klasy CategoryWindow.xaml
 	/// </summary>
-	public partial class CategoryWindow : BudzetBuddy.BudzetBuddy,ISetHeight
+	public partial class CategoryWindow : BudzetBuddy.BudzetBuddy, ISetHeight
 	{
 		public CategoryWindow()
 		{
 			InitializeComponent();
 		}
+
 		public void setHeight()
 		{
 			this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
@@ -35,7 +36,7 @@ namespace ExpansesWPF.Pages.SubPages
 		{
 			LoadCategories();
 			if (AdminPanelVisibility())
-				stpPanelAdmin.Visibility = Visibility.Visible; 
+				stpPanelAdmin.Visibility = Visibility.Visible;
 		}
 
 		private void LoadCategories() => gvCategories.ItemsSource = db.Categories.Where(w => w.categories_usr_ID == userID).ToList();
