@@ -16,19 +16,34 @@ namespace ExpansesWPF.BudzetBuddy
 		public static UserAdmin UserAdmin { get; set; }
 		public bool AddAccount(string login, string password)
 		{
-			var newUser = new Users
+			try
 			{
-				usr_date = DateTime.Now,
-				usr_IsAdmin = false,
-				usr_Login = login,
-				usr_Password = HashPassword(password)
-			};
+				if (db.Users.Any(w => w.usr_Login == login))
+				{
+					WarningBox("Już istnieje taki użytkownik, zmień nazwę");
+					return false;
+				}
 
-			db.Users.InsertOnSubmit(newUser);
-			db.SubmitChanges();
+				var newUser = new Users
+				{
+					usr_date = DateTime.Now,
+					usr_IsAdmin = false,
+					usr_Login = login,
+					usr_Password = HashPassword(password)
+				};
+
+				db.Users.InsertOnSubmit(newUser);
+				db.SubmitChanges();
 
 
-			return true;
+				return true;
+			}
+			catch
+			{
+				WarningBox("błąd podczas dodawania użytkownika");
+				return false;
+			}
+
 		}
 		private static string HashPassword(string password)
 		{
@@ -75,6 +90,10 @@ namespace ExpansesWPF.BudzetBuddy
 					UserAdmin.usr_Login = user.usr_Login;
 					UserAdmin.usr_Password = user.usr_Password;
 				}
+				else
+				{
+					UserAdmin = null;
+				}
 
 				return true;
 			}
@@ -116,14 +135,14 @@ namespace ExpansesWPF.BudzetBuddy
 					cApp.MainWindow.Show();
 					this.Close();
 				}
-				else if(btn.Name == "btnLogout")
+				else if (btn.Name == "btnLogout")
 				{
 					var cApp = ((App)System.Windows.Application.Current);
 					cApp.MainWindow = new LoginWindow();
 					cApp.MainWindow.Show();
 					this.Close();
 				}
-				else if(btn.Name == "btnAdminPanel")
+				else if (btn.Name == "btnAdminPanel")
 				{
 					var cApp = ((App)System.Windows.Application.Current);
 					cApp.MainWindow = new AdminPanelWindow();

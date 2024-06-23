@@ -1,61 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ExpansesWPF.Properties.Settings" Collapsed="true">
-    <Position X="11" Y="4" Width="1.5" />
+    <Position X="17.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>kAAAAAAAAAAAAAAAAAAAIAAAIAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="ExpansesWPF.BudzetBuddy.BudzetBuddy" Collapsed="true">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAhAAIAAQAAAQDAAAAACSAAAAQAAAAEAAAAAAAAA=</HashCode>
+      <HashCode>AAAACBAAIAAUAAAQDAAAAAASAAAAQAAIAAACAAAAAAA=</HashCode>
       <FileName>BudzetBuddy\BudzetBuddy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExpansesWPF.BudzetBuddy.ExpansesDBDataContext" Collapsed="true">
-    <Position X="11" Y="3" Width="1.5" />
+    <Position X="17.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>UAAAECAAABAAAAAAIBgABAIAACAQECAEgAgACAAEIBA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="ExpansesWPF.BudzetBuddy.Users" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.25" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgBiAAABAIAQAAAQwMHCAIABiCAAAgAAAEABAAAAAAA=</HashCode>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="ExpansesWPF.BudzetBuddy.Categories" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.25" Y="3" Width="1.5" />
+    <Position X="16" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAJACAAAQBCQAEDAAABmCAgAAIAQGQEAAAAAAA=</HashCode>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ExpansesWPF.BudzetBuddy.Months" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.25" Y="4" Width="1.5" />
+    <Position X="16" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEgAAAFAAAAAAAAQAUAAIABiCIQAAAAgAgCQAAAAAA=</HashCode>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ExpansesWPF.BudzetBuddy.MonthlyExpanses" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="11" Y="5" Width="1.5" />
+    <Position X="14.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAiAAAFAgApQIRAQgEgQAgRiCBBABAAgAAEEBBAEIE=</HashCode>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="ExpansesWPF.BudzetBuddy.Expanses" Collapsed="true">
-    <Position X="5" Y="3.5" Width="1.5" />
+    <Position X="2.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CABoAAUBiIAAIAAAQAGAAQABiSIAICIAYAAQgAAAkQE=</HashCode>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="ExpansesWPF.BudzetBuddy.Users" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBjAAABAIAQAAAUwMHCAIABiCAQAgAAgEABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ExpansesWPF.BudzetBuddy.UserAdmin" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BudzetBuddy\UserAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExpansesWPF.Pages.SubPages.AdminPanelWindow" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAACAAAAAgA=</HashCode>
+      <FileName>Pages\SubPages\AdminPanelWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Class Name="ExpansesWPF.Pages.SubPages.CategoryWindow" Collapsed="true">
-    <Position X="5.25" Y="2" Width="1.5" />
+    <Position X="2.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAMAABEAAABAAAABASAAAAQAAAAAACAAAAAAA=</HashCode>
       <FileName>Pages\SubPages\CategoryWindow.xaml.cs</FileName>
@@ -63,7 +78,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ExpansesWPF.Pages.SubPages.RaportWindow" Collapsed="true">
-    <Position X="9.75" Y="2" Width="1.5" />
+    <Position X="5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAgAAAAAAAAIAAAAAAAAQAAAAAAAACAAAAACA=</HashCode>
       <FileName>Pages\SubPages\RaportWindow.xaml.cs</FileName>
@@ -71,14 +86,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ExpansesWPF.Pages.SubPages.SumPrice" Collapsed="true">
-    <Position X="7.5" Y="5" Width="1.5" />
+    <Position X="14.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\SubPages\RaportWindow.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExpansesWPF.Pages.LoginWindow" Collapsed="true">
-    <Position X="12" Y="2" Width="1.5" />
+    <Position X="7.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAgAAAAAAAAAAAAQAAAAEAADAAAABAABAAAAAAAAAA=</HashCode>
       <FileName>Pages\LoginWindow.xaml.cs</FileName>
@@ -86,7 +101,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ExpansesWPF.Pages.MainWindow" Collapsed="true">
-    <Position X="7.5" Y="2" Width="1.5" />
+    <Position X="9.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAYAAAAAAAAAEoAIAAAAABAAAAAAAIAAAABDIEAAAAA=</HashCode>
       <FileName>Pages\MainWindow.xaml.cs</FileName>
@@ -94,23 +109,23 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ExpansesWPF.Pages.ExpansesDT" Collapsed="true">
-    <Position X="5" Y="4.75" Width="1.5" />
+    <Position X="2.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pages\MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExpansesWPF.App" Collapsed="true">
-    <Position X="7.5" Y="3" Width="1.5" />
+    <Position X="14.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ExpansesWPF.Window">
-    <Position X="10.75" Y="0.5" Width="1.5" />
+  <Class Name="ExpansesWPF.Window" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAACAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Window.cs</FileName>
     </TypeIdentifier>
   </Class>
