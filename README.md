@@ -36,7 +36,19 @@
 <img src="https://cdn.discordapp.com/attachments/1234064529093038172/1254381031264620574/image.png?ex=667948df&is=6677f75f&hm=592f67296d0f02578fb012469ad5860b054a629607f940b019e64f2202150340&">
 <h2>Licencja:</h2>
   <h5>• Projekt na studia</h5>
-  
+
+<h2>Wzorce projektowe:</h2>
+<h5>Czysty kod, czyli że wszystkie zmienne, które występują w klasie dajemy na górze (najpierw stałe, później prywatne)<br>
+Metody są uprządkowowane, aby czytało się trochę jak jakiś opis, również umieściliśmy metody kolejno najpierw publiczne, następnie prywatne.</h5>
+
+<h2>Obiektowość</h2>
+<h5>Nasza aplikacja, korzysta między innymi z dziedziczenia, hermetyzacji, interfejsów<br>
+Staraliśmy się, aby nasza aplikacja była jak najbardziej optymalna, dlatego funkcje widoków są trzymane w jednej klasie i przez dziedziczenie jest wykorzystywane<br>
+Interfejsy, nam napewno ułatwiły tworzenie metod, które są wykorzystywane w każdym widoku, lecz nie dało się ich użyć w klasie "rodzic", mianowicie wykorzystaliśmy je do tworzenia metod, czyszczenia<br>
+Textbox'ów lub innym parametrów. Również jest zwykły użytkownik, który ma zwykłe prawa do dodawania, zarządzania swoimi wydatkami oraz admin, który dzidziczy po nim wszystkie właściwośći plus dodatkowo<br>
+posiada prawa admina, które pozwalają mu między innymi zarządzać użytkownikami na bazie danych.
+</h5>
+
 <h2>Autorzy i współtwórcy:</h2>
   <h5>•	Patryk Kot<br>
   •	Łukasz Kramorz</h5>
