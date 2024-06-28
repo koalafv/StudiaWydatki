@@ -38,15 +38,21 @@
   <h5>• Projekt na studia</h5>
 
 <h2>Wzorce projektowe:</h2>
-<h5>Czysty kod, czyli że wszystkie zmienne, które występują w klasie dajemy na górze (najpierw stałe, później prywatne)<br>
-Metody są uprządkowowane, aby czytało się trochę jak jakiś opis, również umieściliśmy metody kolejno najpierw publiczne, następnie prywatne.</h5>
+<h5>Dbamy o czysty kod, dlatego wszystkie zmienne w klasie umieszczamy na górze: najpierw stałe, potem prywatne.<br> Metody są uporządkowane tak, aby kod czytało się jak opis: najpierw publiczne, potem prywatne.</h5>
 
 <h2>Obiektowość</h2>
-<h5>Nasza aplikacja, korzysta między innymi z dziedziczenia, hermetyzacji, interfejsów<br>
-Staraliśmy się, aby nasza aplikacja była jak najbardziej optymalna, dlatego funkcje widoków są trzymane w jednej klasie i przez dziedziczenie jest wykorzystywane<br>
-Interfejsy, nam napewno ułatwiły tworzenie metod, które są wykorzystywane w każdym widoku, lecz nie dało się ich użyć w klasie "rodzic", mianowicie wykorzystaliśmy je do tworzenia metod, czyszczenia<br>
-Textbox'ów lub innym parametrów. Również jest zwykły użytkownik, który ma zwykłe prawa do dodawania, zarządzania swoimi wydatkami oraz admin, który dzidziczy po nim wszystkie właściwośći plus dodatkowo<br>
-posiada prawa admina, które pozwalają mu między innymi zarządzać użytkownikami na bazie danych.
+<h5>Nasza aplikacja wykorzystuje dziedziczenie, hermetyzację i interfejsy. W celu optymalizacji kodu, funkcje widoków są zorganizowane w jednej klasie bazowej, z której inne klasy dziedziczą. Interfejsy ułatwiły nam tworzenie metod wspólnych dla różnych widoków, takich jak czyszczenie pól tekstowych.<br>
+<br>
+W systemie mamy dwóch typów użytkowników: zwykłego użytkownika i administratora. Zwykły użytkownik może zarządzać swoimi wydatkami, a administrator dodatkowo ma uprawnienia do zarządzania użytkownikami w bazie danych.<br>
+<br>
+Taka struktura kodu sprawia, że nasza aplikacja jest przejrzysta, łatwa w utrzymaniu i rozwijaniu.
+
+
+
+
+
+
+
 </h5>
 
 <h2>Autorzy i współtwórcy:</h2>
