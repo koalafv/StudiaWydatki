@@ -31,10 +31,10 @@
     •	Wybierz odpowiedni filtr, aby zobaczyć szczegóły wydatków. </h5>
 
 <h2>Diagram (Użytkownik):</h2>
-<a href="https://ibb.co/SV9nxHL">Link do zdjęcia (jeśli się nie ładuje)</a>
+<a href="https://ibb.co/SV9nxHL" target="_blank">Link do zdjęcia (jeśli się nie ładuje)</a>
 <img src="https://cdn.discordapp.com/attachments/1234064529093038172/1234064726741225524/Im9DNcnUBEYAAAAASUVORK5CYII.png?ex=66846896&is=66831716&hm=20aed67c689825c70a70583ac792a98ae0d4e9caef8999aaa967d1d060c8bb5d&">
 <h2>Diagram klas</h2>
-<a href="https://ibb.co/bHstVZH">Link do zdjęcia (jeśli się nie ładuje)</a>
+<a href="https://ibb.co/bHstVZH" target="_blank">Link do zdjęcia (jeśli się nie ładuje)</a>
 <img src="https://cdn.discordapp.com/attachments/1234064529093038172/1254381031264620574/image.png?ex=66847d9f&is=66832c1f&hm=3034d235244018cf445dcb22dfdbb6a6babc4053b4d706b409305ba0ff966dfa&">
 <h2>Licencja:</h2>
   <h5>• Projekt na studia</h5>
