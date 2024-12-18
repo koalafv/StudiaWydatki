@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Expanses" Class="ExpansesDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Expanses;User ID=sa;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True" SettingsObjectName="ExpansesWPF.Properties.Settings" SettingsPropertyName="ExpansesConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Expanses;User ID=admin;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True" SettingsObjectName="ExpansesWPF.Properties.Settings" SettingsPropertyName="ExpansesConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Categories" Member="Categories">
     <Type Name="Categories">
       <Column Name="categories_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
