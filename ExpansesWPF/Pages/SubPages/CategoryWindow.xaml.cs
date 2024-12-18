@@ -19,7 +19,7 @@ namespace ExpansesWPF.Pages.SubPages
 	/// <summary>
 	/// Logika interakcji dla klasy CategoryWindow.xaml
 	/// </summary>
-	public partial class CategoryWindow : BudzetBuddy.BudzetBuddy, ISetHeight
+	public partial class CategoryWindow : BudzetBuddy.BudzetBuddy, ISetHeight, IClearTexbox
 	{
 		public CategoryWindow()
 		{
@@ -91,11 +91,11 @@ namespace ExpansesWPF.Pages.SubPages
 				categories_usr_ID = userID
 			});
 			db.SubmitChanges();
-			ClearTextBox();
+			clearTextBox();
 			LoadCategories();
 		}
 
-		private void ClearTextBox()
+		public void clearTextBox()
 		{
 			tbCategory.Text = string.Empty;
 		}

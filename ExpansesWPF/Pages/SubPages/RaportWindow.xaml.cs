@@ -8,7 +8,7 @@ namespace ExpansesWPF.Pages.SubPages
 	/// <summary>
 	/// Logika interakcji dla klasy RaportWindow.xaml
 	/// </summary>
-	public partial class RaportWindow : BudzetBuddy.BudzetBuddy, ISetHeight
+	public partial class RaportWindow : BudzetBuddy.BudzetBuddy, ISetHeight, IClearTexbox
     {
         List<Months> months = new List<Months>();
         public RaportWindow ( )
@@ -69,6 +69,11 @@ namespace ExpansesWPF.Pages.SubPages
                 gvSummedPrice.ItemsSource = sumPrice;
             }
         }
+
+		public void clearTextBox()
+		{
+			throw new NotImplementedException();
+		}
 	}
 
     class SumPrice
